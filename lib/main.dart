@@ -26,7 +26,6 @@ class MyHomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Title
           Text(
             'Flutter Text Styling',
             style: TextStyle(
