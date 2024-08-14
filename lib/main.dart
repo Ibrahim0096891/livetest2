@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Text Styling and Snackbar'),
+          title: Text('Text Styling App'),
         ),
         body: MyHomePage(),
       ),
@@ -43,17 +43,37 @@ class MyHomePage extends StatelessWidget {
               fontStyle: FontStyle.italic,
             ),
           ),
-          SizedBox(height: 20.0),
+          SizedBox(height: 5.0),
 
           TextButton(
             onPressed: () {
-              final snackBar = SnackBar(
-                content: Text('You clicked the button!'),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
+                print('You clicked the button!');
             },
             child: Text('Click Me'),
           ),
+          SizedBox(height: 1.0),
+
+          Text.rich(
+            TextSpan(
+              text: 'Welcome to ',
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),
+              children:[
+                TextSpan(
+                  text: 'Flutter!',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          )
+
         ],
       ),
     );
